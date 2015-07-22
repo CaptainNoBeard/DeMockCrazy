@@ -25,6 +25,4 @@ def get_votes_DEM():
     return leadDEM
 
 def results():
-    print get_votes_GOP(), get_votes_DEM()
-##    lead = leadGOP + leadDEM
-##    print lead
+    return get_votes_GOP() + ' ' + get_votes_DEM()
