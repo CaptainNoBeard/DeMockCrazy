@@ -6,5 +6,5 @@ def get_votes():
     uGOP = urllib2.urlopen( urlGOP )
     resultGOP = json.loads(uGOP.read())
     resultGOP = resultGOP[0:1]
-    print resultGOP
+    return resultGOP[0]['estimates'][0]['value']
     ################return result['list'][0]['main']['votes']
