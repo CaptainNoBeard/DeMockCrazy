@@ -1,23 +1,20 @@
 from flask import Flask, render_template, request
-import util
+from util import *
 import datetime
 import urllib2
 from urllib import urlencode
 
 try:
     import json
-except ImportErorr:
+except ImportError:
     import simplejson as json
 
 
 app = Flask( __name__ )
 
 @app.route('/', methods=["GET","POST"])
-def root( ):
-    if request.method=="POST":
-        print result
-
-
+def root():
+    return results()
 
 
 if __name__ == '__main__':
