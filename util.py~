@@ -10,7 +10,7 @@ def get_votes_GOP():
     pts = str(resultGOP['value'])
     name = str(resultGOP['first_name']) + ' ' + str(resultGOP['last_name'])
     party = str(resultGOP['party'])
-    leadGOP = name + ' is in the lead of the ' + party +' primary race, with '+ pts + ' percent of the ' + party + ' vote.'
+    leadGOP = name + ' is in the lead of the GOP primary race, with '+ pts + ' percent of the ' + party + ' vote.'
     return leadGOP
     
 def get_votes_DEM():
@@ -21,8 +21,9 @@ def get_votes_DEM():
     pts = str(resultDEM['value'])
     name = str(resultDEM['first_name']) + ' ' + str(resultDEM['last_name'])
     party = str(resultDEM['party'])
-    leadDEM = name + ' is in the lead of the ' + party +' primary race, with '+ pts + ' percent of the ' + party + ' vote.'
+    leadDEM = name + ' is in the lead of the Democratic primary race, with '+ pts + ' percent of the ' + party + ' vote.'
     return leadDEM
 
 def results():
-    return '<head> <link rel="stylesheet" type="text/css" href="/static/style.css">get_votes_GOP() + '<br>' + get_votes_DEM()
+    return get_votes_GOP() + '\n' + get_votes_DEM()
+    
