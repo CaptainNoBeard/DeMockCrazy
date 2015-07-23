@@ -25,4 +25,4 @@ def get_votes_DEM():
     return leadDEM
 
 def results():
-    return get_votes_GOP() + '<br>' + get_votes_DEM()
+    return '<head> <link rel="stylesheet" type="text/css" href="/static/style.css"> </head>' + get_votes_GOP() + '<br>' + get_votes_DEM()
