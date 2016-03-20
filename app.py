@@ -14,8 +14,9 @@ app = Flask( __name__ )
 
 @app.route('/', methods=["GET","POST"])
 def root(): 
-
-	return render_template('index.html', poll=results())
+    gopName = get_name_GOP()
+    demName = get_name_DEM()
+    return render_template('index.html', demResults=get_votes_DEM(), gopResults=get_votes_GOP(), gopName=gopName, demName=demName)
     
 if __name__ == '__main__':
     app.debug = True
